@@ -4,6 +4,7 @@ import { useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
 import Constants from '../constants';
+import { Login } from '../store/login/types';
 
 import { loadRequest, loadSuccess, loadFailure } from '../store/login/actions';
 
@@ -15,9 +16,9 @@ const useLogin = () => {
     dispatch(loadRequest());
 
     try {
-      const token = (await axios.post<{ token: string }>(`${process.env.REACT_APP_WALLET_API}${Constants.API_LOGIN_ROUTE}`, { username, password }))?.data?.token;
+      const data = (await axios.post<Login>(`${process.env.REACT_APP_WALLET_API}${Constants.API_LOGIN_ROUTE}`, { username, password }))?.data;
 
-      dispatch(loadSuccess(token));
+      dispatch(loadSuccess(data));
 
       history.push(Constants.DASHBOARD_ROUTE);
     } catch (error) {
