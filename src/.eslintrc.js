@@ -32,12 +32,7 @@ module.exports = {
     "import/prefer-default-export": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
-    "linebreak-style": ["error", "windows", {
-      js: "never",
-      jsx: "never",
-      ts: "never",
-      tsx: "never"
-    }],
+    "linebreak-style": 0,
     "import/extensions": [
       "error",
       "ignorePackages",
