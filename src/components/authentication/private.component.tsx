@@ -3,6 +3,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
+import { Container } from '@material-ui/core';
 import useAuthentication from '../../hooks/useAuthentication';
 import Navbar from '../navbar/navbar.component';
 
@@ -17,9 +18,10 @@ const PrivateRoute = (
       {...rest}
       render={
         (props) => (isAuthenticated() ? (
-          <Navbar>
+          <Container maxWidth="xl">
+            <Navbar />
             <Component path={path} {...props} />
-          </Navbar>
+          </Container>
         ) : (
             <Redirect to={{
               pathname: '/',
