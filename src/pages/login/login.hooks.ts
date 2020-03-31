@@ -3,10 +3,10 @@ import axios from 'axios';
 import { useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
-import Constants from '../constants';
-import { Login } from '../store/login/types';
 
-import { loadRequest, loadSuccess, loadFailure } from '../store/login/actions';
+import { loadRequest, loadSuccess, loadFailure } from '../../store/login/actions';
+import { Login } from '../../store/login/types';
+import Constants from '../../constants';
 
 const useLogin = () => {
   const dispatch = useDispatch();

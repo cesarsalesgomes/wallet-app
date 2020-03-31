@@ -4,8 +4,9 @@
 import React from 'react';
 import { Route, Redirect } from 'react-router-dom';
 import { Container } from '@material-ui/core';
-import useAuthentication from '../../hooks/useAuthentication';
+
 import Navbar from '../navbar/navbar.component';
+import useAuthentication from './private.hooks';
 
 const PrivateRoute = (
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -18,7 +19,7 @@ const PrivateRoute = (
       {...rest}
       render={
         (props) => (isAuthenticated() ? (
-          <Container maxWidth="xl">
+          <Container maxWidth="lg">
             <Navbar />
             <Component path={path} {...props} />
           </Container>

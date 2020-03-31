@@ -8,4 +8,6 @@ export default class Constants {
   public static readonly DASHBOARD_ROUTE: string = '/dashboard';
 
   public static readonly LOGIN_ROUTE: string = '/';
+
+  public static readonly USER_STOCKS_API_ROUTE: string = '/users/stocks';
 }

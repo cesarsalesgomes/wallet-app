@@ -43,7 +43,8 @@ module.exports = {
         tsx: "never"
       }
     ],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "react/prop-types": ["error", "never"]
   },
   settings: {
     "import/parsers": {

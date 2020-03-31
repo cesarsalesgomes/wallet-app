@@ -2,9 +2,9 @@ import { useDispatch } from 'react-redux';
 import { useCallback } from 'react';
 import { useHistory } from 'react-router';
 import { toast } from 'react-toastify';
-import Constants from '../constants';
 
-import { loadSuccess } from '../store/login/actions';
+import { loadSuccess } from '../../store/login/actions';
+import Constants from '../../constants';
 
 const useLogout = () => {
   const dispatch = useDispatch();

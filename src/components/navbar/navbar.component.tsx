@@ -3,7 +3,7 @@ import {
   AppBar, Toolbar, Typography, Button
 } from '@material-ui/core';
 import navbarStyles from './navbar.style';
-import useLogout from '../../hooks/useLogout';
+import useLogout from './navbar.hooks';
 
 const Navbar: React.FC = () => {
   const classes = navbarStyles();
@@ -18,12 +18,12 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" color="inherit">
       <Toolbar>
-        <Typography variant="h6" className={classes.title}>
-          Dashboard
+        <Typography variant="h6" className={classes.title} color="textPrimary">
+          Stocks
         </Typography>
-        <Button color="inherit" onClick={logoutOnClick}>
+        <Button onClick={logoutOnClick}>
           Logout
         </Button>
       </Toolbar>
